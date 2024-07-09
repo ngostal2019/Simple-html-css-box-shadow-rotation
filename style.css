@@ -1,0 +1,48 @@
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(247, 250, 232, 0.962); /* Black background with opacity */
+  z-index: -1; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.left-border {
+    position: relative;
+    border: 5px solid rgba(192, 192, 192, 0.5);
+    border-radius: 25px;
+    border-left-color: rgb(42, 165, 46);
+    border-right-color: rgb(248, 248, 16);
+    border-bottom-color: rgb(248, 16, 16);
+    border-top-color: orange;
+    background-color: rgb(19, 112, 194);
+    width: 50vmin;
+    height: 50vmin;
+    top: 15;
+    margin: 100px auto;
+    text-align: center;
+    align-content: center;
+    font-size: calc(100px + 2vmin);
+    box-shadow: 20px 20px #888888;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+@keyframes left-border {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .left-border:hover {
+        animation: left-border infinite 5s linear;
+    }
+}
